@@ -1,3 +1,4 @@
+import os
 def load(argv):
     try:
         exec(open(argv[0]+'.py').read(),globals())
@@ -29,7 +30,9 @@ def loaded(argv):
 def cmdl(argv):
     for cmd in commands:
         print(cmd)
-commands = {'load':load,'help':h,'info':info,'run':run,'loaded':loaded,'cmdl':cmdl}
+def clear(argv):
+    os.system('clear')
+commands = {'load':load,'help':h,'info':info,'run':run,'loaded':loaded,'cmdl':cmdl,'clear':clear}
 def runner():
         useri = input('z > ')
         command = useri.split(' ')[0]
