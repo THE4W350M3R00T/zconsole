@@ -35,7 +35,7 @@ def clear(argv):
 def exit(argv):
     print('Shutdown')
     sys.exit(1)
-commands = {'load':load,'help':h,'info':info,'run':run,'loaded':loaded,'cmdl':cmdl,'clear':clear}
+commands = {'load':load,'help':h,'info':info,'run':run,'loaded':loaded,'cmdl':cmdl,'clear':clear,'exit',exit}
 def runner():
         useri = input('z > ')
         command = useri.split(' ')[0]
