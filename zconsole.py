@@ -1,4 +1,4 @@
-import os
+import os,sys
 def load(argv):
     try:
         exec(open(argv[0]+'.py').read(),globals())
