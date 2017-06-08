@@ -41,7 +41,7 @@ def set(argv):
         print(argv[0]+' = '+argv[1])
     except:
         print('[-] Eroor')
-commands = {'load':load,'help':h,'info':info,'run':run,'loaded':loaded,'cmdl':cmdl,'clear':clear,'exit':exit}
+commands = {'load':load,'help':h,'info':info,'run':run,'loaded':loaded,'cmdl':cmdl,'clear':clear,'exit':exit,'set':set}
 def runner():
         useri = input('z > ')
         command = useri.split(' ')[0]
