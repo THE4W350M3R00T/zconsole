@@ -37,10 +37,10 @@ def exit(argv):
     sys.exit(1)
 def set(argv):
     try:
-        exec('mod.'+argv[0]+'='+argv[1])
+        exec('mod.'+argv[0]+'='+'"'+argv[1]+'"')
         print(argv[0]+' = '+argv[1])
     except:
-        print('[-] Eroor')
+        print('[-] Erorr')
 commands = {'load':load,'help':h,'info':info,'run':run,'loaded':loaded,'cmdl':cmdl,'clear':clear,'exit':exit,'set':set}
 def runner():
         useri = input('z > ')
