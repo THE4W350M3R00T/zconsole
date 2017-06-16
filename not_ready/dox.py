@@ -72,19 +72,4 @@ class dox:
     def whois(self, site):
         command = os.popen("whois " + str(site))
         result = command.read()
-        result = result.split("http://wdprs.internic.net/")[0]
-        result = result[:len(result)-1]
-        try:
-            result = result.split("time.")[1]
-        except:
-            pass
-        try:
-            result = result.split("Copyright notice")[0]
-        except:
-            pass
-        try:
-            result = result[:len(result)-1]
-        except:
-            pass
-        result = result.replace("URL of the ICANN WHOIS Data Problem Reporting System", '')
         print(result)
