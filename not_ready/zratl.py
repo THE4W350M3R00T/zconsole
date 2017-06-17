@@ -7,7 +7,7 @@ class module:
         self.PORT = 8000
         self.help = 'PORT: The port to listen for connections'
     def main(self):
-        self.listener.bind(('127.0.0.1',int(self.PORT)))
+        self.listener.bind(('0.0.0.0',int(self.PORT)))
         self.listener.listen(1)
         conn,addr = self.listener.accept()
         print("Connection from: {}".format(str(addr)))
