@@ -13,5 +13,8 @@ class module:
       conn,addr = self.listener.accept()
       print(conn.recv(1024).decode())
       print(addr[0])
+      while True:
+        conn.send(input('command: ').encode())
+        print(conn.recv(1024).decode())
       
     
